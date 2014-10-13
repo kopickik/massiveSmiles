@@ -1,5 +1,7 @@
 <?php
 
+use \Illuminate\Contracts\Events\Dispatcher;
+
 class PagesController extends \BaseController {
 
 	/**
@@ -15,6 +17,7 @@ class PagesController extends \BaseController {
 		// return View::make('pages.home', compact('lessons')); -- same
 		// return View::make('pages.home')->with('lessons', $lessons); -- same
 		return View::make('pages.home', compact('lessons', 'name'));
+		//$dispatcher->fire('UserHasLoggedIn');
 	}
 
 	public function basicData()
@@ -96,6 +99,15 @@ class PagesController extends \BaseController {
 	{
 		//
 	}
+	/* laracasts.com/lessons/the-observer-design-pattern-in-php
+
+	Event::listen('UserHasLoggedIn', function() {
+	  var_dump('fire off an email.');
+	});
+
+	Event::listen('UserHasLoggedIn', function() {
+	  var_dump('do some reporting.');
+	});*/
 
 
 }
