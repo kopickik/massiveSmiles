@@ -1,0 +1,23 @@
+{
+  "name": "massiveSmiles",
+  "version": "0.0.1",
+  "authors": [
+    "Kyle Kopicki <spoonfedweb@gmail.com>"
+  ],
+  "description": "Site built on Laravel 4.2. Pure marketing site.",
+  "main": "index.php",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "massiveSmiles"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "app/tests"
+  ]
+}
