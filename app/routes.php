@@ -5,11 +5,7 @@
 */
 
 //Route::get('/', 'PagesController@index');
-
-// Send Mandrill email.
-Route::get('/', function() {
-  return 'Hi there.';
-});
+Route::get('/', 'PagesController@index');
 Route::get('basic-data', 'PagesController@basicData');
 Route::get('about', 'PagesController@about');
 
@@ -24,3 +20,5 @@ Route::get('songs/{song}', 'SongsController@show');
 
 // USERS RESOURCE (MAIL EXAMPLE)
 Route::resource('users', 'UsersController');
+
+Route::get('lessons', 'LessonsController@index');

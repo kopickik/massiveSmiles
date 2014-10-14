@@ -16,6 +16,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+          @yield('header')
           @yield('content')
           @yield('footer')
 
@@ -31,5 +32,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+        @yield('bodyClosingTagScripts')
     </body>
 </html>
