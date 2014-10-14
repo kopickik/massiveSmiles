@@ -19,6 +19,11 @@ Route::get('songs', 'SongsController@index');
 Route::get('songs/{song}', 'SongsController@show');
 
 // USERS RESOURCE (MAIL EXAMPLE)
+
 Route::resource('users', 'UsersController');
 
-Route::get('lessons', 'LessonsController@index');
+// LESSONS RESOURCE (laracasts.com/series/incremental-api-development/episodes/2)
+//Route::group()
+Route::group(['prefix' => 'api/v1'], function() {// adding a prefix - check with artisan routes
+  Route::resource('lessons', 'LessonsController');
+});
