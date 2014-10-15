@@ -20,9 +20,7 @@ class LessonsController extends \BaseController {
 		// RULE: Linking db structure to the API output - awful
 		// 4. No way to *signal error codes**, response codes*HTTP*
 
-		return Response::json([
-				'data' => $lessons->toArray()
-			], 200);
+		return '<pre>'.json_encode($lessons, JSON_PRETTY_PRINT).'</pre>';
 	}
 
 
@@ -60,8 +58,11 @@ class LessonsController extends \BaseController {
 
 		if ( ! $lesson ) {
 			return Response::json([
-				''
-				]);
+				'error' => [
+					'message'		=> 'Lesson does not exist.',
+					'code'			=> '40004'
+					]
+				], 404);
 		}
 		return Response::json([
 			'data' => $lesson
