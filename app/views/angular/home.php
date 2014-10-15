@@ -20,7 +20,7 @@
     </head>
     <body ng-controller="TodosController">
 
-      <h1>Todos  <small>({{ remaining() }} remaining)</small></h1>
+      <h1>Todos  <small ng-show="remaining()">({{ remaining() }} remaining)</small></h1>
       <input type="text" placeholder="filter todos" ng-model="search">
       <ul>
         <li ng-repeat="todo in todos | filter:search">
