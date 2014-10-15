@@ -3,7 +3,7 @@
 /*
 ...many comments in this file.  Very powerful stuff!
 */
-//Route::get('/', 'PagesController@index');
+
 Route::get('/', 'PagesController@index');
 Route::get('basic-data', 'PagesController@basicData');
 Route::get('about', 'PagesController@about');

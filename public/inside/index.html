@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Angular Forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="insideStyle.css">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+    <h1>Welcome. <small>This example will demonstrate Angular Forms.</small></h1>
+    <div class="pure-g">
+      <div class="pure-u-1-3"><p>Thirds</p></div>
+      <div class="pure-u-1-3"><p>Thirds</p></div>
+      <div class="pure-u-1-3"><p>Thirds</p></div>
+    </div>
+    <div id="container" ng-controller="AppCtrl" class="">
+
+      <form name="appForm" novalidate class="pure-form pure-form-aligned">
+          <fieldset>
+          <legend>A compact, sample registration inline form</legend>
+              <div class="pure-control-group">
+                  <label for="firstName">First name</label>
+                  <input id="firstName" type="text" name="firstName" ng-model="user.firstName" required placeholder="first name">
+              </div>
+
+              <div class="pure-control-group">
+                  <label for="lastName">Last name</label>
+                  <input type="text" name="lastName" ng-model="user.lastName" required placeholder="last name">
+                  <span ng-show="appForm.lastName.$dirty && appForm.lastName.$error.required">Required: Tell us your last name</span>
+              </div>
+
+              <div class="pure-control-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" name="email" ng-model="user.email" required>
+                  <span ng-show="appForm.email.$dirty && appForm.email.$error.required">Required: Tell us your email address</span>
+                  <span ng-show="appForm.email.$dirty && appForm.email.$error.email">This is not a valid email address.</span>
+              </div>
+
+              <div class="pure-controls">
+                  <label for="cb" class="pure-checkbox">
+                      <input id="cb" type="checkbox"> I've read the terms and conditions
+                  </label>
+
+                  <button type="submit" class="pure-button pure-button-primary" ng-click="save()">Submit</button>
+              </div>
+          </fieldset>
+      </form>
+      <div class="pure-g">
+        <div class="pure-u-1-1" ng-show="master">{{master | json}}</div> 
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
