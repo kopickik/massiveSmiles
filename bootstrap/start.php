@@ -25,8 +25,10 @@ $app = new Illuminate\Foundation\Application;
 */
 
 $env = $app->detectEnvironment(array(
+  'local' => ['*.dev', gethostname()],
+  'production' => ['*.com', '*.net', '*.io', '*.org']
 
-	'local' => array('homestead'),
+	//'local' => array('local', 'localhost', '127.0.0.1', 'homestead'),
 
 ));
 

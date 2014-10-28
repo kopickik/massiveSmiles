@@ -18,9 +18,14 @@ Route::get('angular', function() {
 // Is the flow control                       *:
 // Basically wholly handled client side      *:
 
-Route::get('todos', function() {
-  return Todo::all();
-});
+//Route::get('todos', function() {
+//  return Todo::all();
+//});
+//Route::post('todos', function() {
+//  return Todo::create(Input::all());
+//});
+
+Route::resource('todos', 'TodosController');
 Route::post('todos', function() {
   return Todo::create(Input::all());
 });

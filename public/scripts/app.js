@@ -1,4 +1,7 @@
-function TodosController($scope, $http) {
+var myApp = angular.module('myApp', []);
+
+myApp.controller('TodosController', function TodosController ($scope, $http) {
+
   $http.get('/todos').success(function(todos){
     $scope.todos = todos;
   });
@@ -19,4 +22,4 @@ function TodosController($scope, $http) {
     $scope.todos.push(todo);
     $http.post('todos', todo);
   };
-}
+});
