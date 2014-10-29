@@ -11,11 +11,13 @@ class DatabaseSeeder extends Seeder {
 	{
 		DB::table('lessons')->truncate();
 		DB::table('todos')->truncate();
+		DB::table('nerds')->truncate();
 		Eloquent::unguard();
 
 		// $this->call('UserTableSeeder');
 		$this->call('LessonsTableSeeder');
 		$this->call('TodosTableSeeder');
+		$this->call('NerdsTableSeeder');
 	}
 
 }

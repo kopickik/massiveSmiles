@@ -39,7 +39,7 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		
 	}
 
 

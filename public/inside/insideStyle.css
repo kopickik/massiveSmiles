@@ -1,16 +1,17 @@
 body {
-  max-width: 54em;
+  max-width: 64em;
   margin: auto;
   font-family: Consolas, monaco, monospace;
 }
 
-small {
+h1 small {
   font-size: 0.4em;
   color: #61a381;
 }
 
 .pure-form .ng-dirty.ng-invalid {
   background-color: #ff0000;
+  transition: background-color 0.2s;
 }
 
 .pure-form .ng-dirty.ng-valid {

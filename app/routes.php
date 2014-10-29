@@ -61,7 +61,7 @@ Route::get('songs/{song}', 'SongsController@show');
 
 // USERS RESOURCE (MAIL EXAMPLE)
 Route::resource('users', 'UsersController');
-
+Route::resource('nerds', 'NerdsController');
 //SONGS RESOURCE
 //==============
 //Route::bind('song', function($slug) {
